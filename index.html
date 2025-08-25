@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raj Verma | Portfolio</title>
+  <style>
+    /* ===== General Reset ===== */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { background: #f9f9f9; color: #333; line-height: 1.6; }
+
+    /* ===== Header ===== */
+    header {
+      background: linear-gradient(135deg, #1f4037, #99f2c8);
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    header h1 { font-size: 3rem; margin-bottom: 10px; }
+    header p { font-size: 1.2rem; opacity: 0.9; }
+
+    /* ===== Navigation ===== */
+    nav {
+      background: #222;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #99f2c8; }
+
+    /* ===== Sections ===== */
+    section {
+      padding: 60px 10%;
+      animation: fadeUp 1s ease-in-out;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+    h2::after {
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 3px;
+      bottom: -5px;
+      left: 0;
+      background: #1f4037;
+      border-radius: 2px;
+    }
+
+    /* ===== Skills ===== */
+    .skills ul { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+    .skills li {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .skills li:hover { transform: translateY(-5px); }
+
+    /* ===== Projects ===== */
+    .project-item {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-left: 5px solid #1f4037;
+      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project-item:hover {
+      transform: translateX(10px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    /* ===== Experience ===== */
+    .exp-item {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-left: 5px solid #99f2c8;
+      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .exp-item:hover {
+      transform: translateX(10px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    /* ===== Achievements ===== */
+    .awards ul { list-style: none; }
+    .awards li {
+      background: #fff;
+      padding: 12px 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: background 0.3s;
+    }
+    .awards li:hover { background: #e6fff3; }
+
+    /* ===== Contact ===== */
+    .contact p { margin: 10px 0; }
+    .contact a {
+      color: #1f4037;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    .contact a:hover { color: #0077b5; } /* LinkedIn blue */
+
+    /* ===== Footer ===== */
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    footer a { color: #99f2c8; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ===== Animations ===== */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Raj Verma</h1>
+    <p>Computer Science Engineer | Developer | Innovator</p>
+  </header>
+
+  <nav>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#awards">Achievements</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ===== Skills Section ===== -->
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Languages:</strong> C, C++, Java, Python, SQL</li>
+      <li><strong>Frameworks:</strong> TensorFlow, Keras, Node.js</li>
+      <li><strong>Tools:</strong> Git, VS Code, Oracle Database</li>
+      <li><strong>Platforms:</strong> GitHub, Arduino, Linux, gem5</li>
+      <li><strong>Soft Skills:</strong> Leadership, Event Management, Writing, Public Speaking, Time Management</li>
+    </ul>
+  </section>
+
+  <!-- ===== Projects Section ===== -->
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+
+    <div class="project-item">
+      <h3>zeroBIN - Smart Waste Management System</h3>
+      <p>
+        Developed an IoT-powered waste management system to enable 
+        <strong>real-time waste classification, route optimization, and dynamic scheduling</strong>. 
+        Integrated <strong>TensorFlow</strong> for image-based waste detection and <strong>Google OR-Tools</strong> with Google Maps API for route optimization. 
+        The system reduced collection time and improved efficiency for municipal operations.  
+      </p>
+      <p><em>Tech Stack:</em> Python, TensorFlow, Node-RED, MQTT, Google OR-Tools, Google Maps API</p>
+    </div>
+
+    <div class="project-item">
+      <h3>Craneopedia - Crane Comparison & Decision Support Platform</h3>
+      <p>
+        Designed a web platform that assists construction engineers in 
+        <strong>comparing cranes, analyzing load distribution, and planning safe operations</strong>. 
+        Integrated <strong>Augmented Reality (AR)</strong> for real-time crane visualization and <strong>Solidity</strong>-based smart contracts for automated disaster insurance. 
+        This project enables smarter and safer decision-making in heavy machinery operations.  
+      </p>
+      <p><em>Tech Stack:</em> Node.js, Python, TensorFlow, ARKit, Solidity, Weather API</p>
+    </div>
+
+    <div class="project-item">
+      <h3>NextMed - Remote Equipment Monitoring Dashboard</h3>
+      <p>
+        Built an IoT-enabled healthcare platform to <strong>monitor medical equipment in real time, predict maintenance needs, and generate alerts</strong>. 
+        Designed a <strong>Flask-based dashboard</strong> for visualization and integrated predictive algorithms for anomaly detection. 
+        Improved hospital equipment uptime and reduced operational costs.  
+      </p>
+      <p><em>Tech Stack:</em> Python, Flask, Arduino, MQTT, Chart.js</p>
+    </div>
+
+    <div class="project-item">
+      <h3>Line Follower Robot</h3>
+      <p>
+        Designed and built an autonomous robot using <strong>Arduino and IR sensors</strong> to follow predefined paths while avoiding obstacles. 
+        Applied control algorithms for smooth navigation and decision-making. 
+        The project strengthened my knowledge of robotics, sensors, and embedded systems.  
+      </p>
+      <p><em>Tech Stack:</em> Arduino, C++</p>
+    </div>
+  </section>
+
+  <!-- ===== Experience Section ===== -->
+  <section id="experience" class="experience">
+    <h2>Experience</h2>
+    <div class="exp-item">
+      <h3>Intern – Indian Institute of Technology (IIT) Guwahati</h3>
+      <p><em>June 2025 – July 2025 | Guwahati, India</em></p>
+      <p>
+        Worked on the <strong>implementation and analysis of cache optimization techniques</strong> using the gem5 simulator. 
+        Researched and experimented with <strong>early restart and critical word-first strategies</strong> to enhance CPU performance. 
+        Built custom cache models, analyzed memory behavior, and compared performance metrics across workloads. 
+        This internship improved my skills in <strong>computer architecture, low-level programming, and performance evaluation</strong>.
+      </p>
+      <p><em>Tools & Tech:</em> gem5, C++, Python, Linux</p>
+    </div>
+  </section>
+
+  <!-- ===== Achievements Section ===== -->
+  <section id="awards" class="awards">
+    <h2>Achievements</h2>
+    <ul>
+      <li>Top 5 in Zinnovatio 2.0 Hackathon (2025)</li>
+      <li>Runner-up in Mind Sprint 2025</li>
+      <li>3rd Position at Saviskar Hackathon (2024)</li>
+      <li>National Level Award for Essay Competition (2019)</li>
+      <li>National Spell Bee Certification (2015)</li>
+    </ul>
+  </section>
+
+  <!-- ===== Contact Section ===== -->
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:vraj140805@gmail.com">vraj140805@gmail.com</a></p>
+    <p>Phone: +91-8777077361</p>
+    <p>
+      <a href="https://www.linkedin.com/in/raj-verma-173580275/" target="_blank">LinkedIn</a> | 
+      <a href="https://github.com/vermaraj14" target="_blank">GitHub</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Raj Verma | Portfolio</p>
+  </footer>
+</body>
+</html>
